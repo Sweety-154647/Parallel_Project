@@ -53,7 +53,6 @@ public class MainUI {
 						System.out.println("Enter mailId");
 						mailId = sc.next();
 						ser.validatemailId(mailId);
-						;
 						break;
 					} catch (AppException e) {
 					}
@@ -152,16 +151,17 @@ public class MainUI {
 
 						case 3: {
 
-							System.out.println("Enter withdraw Amount:");
-							double d = sc.nextDouble();
+							
 							double x;
 							while (true) {
 								try {
+									System.out.println("Enter withdraw Amount:");
+									double d = sc.nextDouble();
 									x = ser.withdraw(m, d);
 									break;
 								} catch (AppException e) {
 
-									e.printStackTrace();
+									
 								}
 							}
 							System.out.println("Your Balance after withdraw is :" + x + "\n\n");
@@ -183,10 +183,11 @@ public class MainUI {
 								}
 							}
 
-							System.out.println("Enter phn no of account you want to tranfer money");
-							String ph = sc.next();
+							
 
 							try {
+								System.out.println("Enter phn no of account you want to tranfer money");
+								String ph = sc.next();
 								na = ser.fundTransfer(m, ta, ph);
 								System.out.println("Your Balance after Transfer:" + na + "\n\n");
 							} catch (AppException e) {
