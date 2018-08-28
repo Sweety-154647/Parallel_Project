@@ -133,11 +133,12 @@ public class MainUI {
 						}
 						case 2: {
 
-							System.out.println("Enter deposit amount");
-							double b = sc.nextDouble();
+							
 							double bal;
 							while (true) {
 								try {
+									System.out.println("Enter deposit amount");
+									double b = sc.nextDouble();
 									bal = ser.deposit(m, b);
 									break;
 								} catch (AppException e) {
@@ -171,8 +172,9 @@ public class MainUI {
 							double na = 0;
 
 							while (true) {
-								System.out.println("Enter tranfer amount:");
+								
 								try {
+									System.out.println("Enter tranfer amount:");
 									ta = sc.nextDouble();
 									ser.validatbalance(ta);
 									break;
